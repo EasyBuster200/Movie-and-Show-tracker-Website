@@ -38,6 +38,7 @@ router.get('/discover/movie', (req, res) => proxyToTmdb('/discover/movie', req, 
 router.get('/discover/tv', (req, res) => proxyToTmdb('/discover/tv', req, res));
 router.get('/genre/movie/list', (req, res) => proxyToTmdb('/genre/movie/list', req, res));
 router.get('/genre/tv/list', (req, res) => proxyToTmdb('/genre/tv/list', req, res));
+router.get('/collection/:id', (req, res) => proxyToTmdb(`/collection/${req.params.id}`, req, res));
 router.get('/movie/:id', (req, res) => proxyToTmdb(`/movie/${req.params.id}`, req, res));
 router.get('/tv/:id', (req, res) => proxyToTmdb(`/tv/${req.params.id}`, req, res));
 router.get('/tv/:id/season/:seasonNumber', (req, res) =>
